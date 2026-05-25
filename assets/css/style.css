@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#BDA1B3,#CBC7CC);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    animation:bgMove 10s infinite alternate;
+}
+
+/* ANIMATED BACKGROUND */
+@keyframes bgMove{
+    0%{
+        background-position:left;
+    }
+    100%{
+        background-position:right;
+    }
+}
+
+.container{
+    width:420px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.18);
+    border:1px solid rgba(255,255,255,0.3);
+    backdrop-filter:blur(20px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    animation:fadeIn 1s ease;
+}
+
+h1{
+    text-align:center;
+    color:#4d3b4f;
+    margin-bottom:30px;
+    font-size:32px;
+    font-weight:600;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.6);
+    font-size:16px;
+    transition:0.3s;
+}
+
+input:focus{
+    transform:scale(1.02);
+    background:white;
+    box-shadow:0 0 10px rgba(141,106,159,0.4);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#8D6A9F;
+    color:white;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#6f5480;
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.link a{
+    color:#4d3b4f;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.link a:hover{
+    color:#8D6A9F;
+    letter-spacing:0.5px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:rgba(255,255,255,0.2);
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#8D6A9F;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    background:rgba(255,255,255,0.4);
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+}
